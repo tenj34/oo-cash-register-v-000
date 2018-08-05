@@ -7,7 +7,7 @@ def initialize(discount = 0)
   @items = [] # An empty of array of items everytime we call the class
 end
 
-  def add_item(title,price,quantity =1)
+  def add_item(title,price,quantity = 1)
     self.total += quantity * amount
     quantity.times do
       @items << title
