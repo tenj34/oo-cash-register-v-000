@@ -14,6 +14,7 @@ def add_item(title,price,quantity =1)
   end
   @last_transaction = quantity * amount
 end
+
 def apply_discount
   if @discount == 0
     return "There is no discount to apply."
