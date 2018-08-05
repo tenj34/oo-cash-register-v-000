@@ -19,8 +19,8 @@ class CashRegister
     if self.discount == 0
       return "There is no discount to apply."
     else
-      @total = @total * ((100.0 - discount) / 100.0)
-      return "After the discount, the total comes to $#{@total.to_i}."
+      self.total = self.total * ((100.0 - discount) / 100.0)
+      return "After the discount, the total comes to $#{self.total.to_i}."
     end
   end
 
