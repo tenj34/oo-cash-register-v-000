@@ -9,10 +9,10 @@ end
 
 def add_item(title,price,quality)
   self.total += quantity * amount
-quantity.times do
-@items << title
-end
-@last_transaction = quantity * amount
+  quantity.times do
+    @items << title
+  end
+  @last_transaction = quantity * amount
 end
 
 
