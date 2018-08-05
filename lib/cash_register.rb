@@ -12,7 +12,7 @@ end
     quantity.times do
       @items << title
     end
-    @last_transaction = quantity * amount
+    self.last_transaction= quantity * amount
   end
 
   def apply_discount
