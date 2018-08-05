@@ -4,7 +4,7 @@ class CashRegister
 def initialize(discount = 0)
   @total = 0
   @discount = discount
-  @items = []
+  @items = [] # An empty of array of items everytime we call the class
 end
 
 
