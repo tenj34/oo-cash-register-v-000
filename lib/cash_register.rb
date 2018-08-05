@@ -15,18 +15,16 @@ def add_item(title,price,quantity =1)
   @last_transaction = quantity * amount
 end
 
-def apply_discount
-  if @discount == 0
-    return "There is no discount to apply."
-  else
-    @total = @total * ((100.0 - discount) / 100.0)
-    return "After the discount, the total comes to $#{@total.to_i}."
+  def apply_discount
+    if @discount == 0
+      return "There is no discount to apply."
+    else
+      @total = @total * ((100.0 - discount) / 100.0)
+      return "After the discount, the total comes to $#{@total.to_i}."
+    end
   end
-end
- def void_last_transaction
-  @total = @total - @last_transaction
-end
-
-
+  def void_last_transaction
+    @total = @total - @last_transaction
+  end
 
 end
