@@ -7,13 +7,13 @@ def initialize(discount = 0)
   @items = [] # An empty of array of items everytime we call the class
 end
 
-def add_item(title,price,quantity =1)
-  self.total += quantity * amount
-  quantity.times do
-    @items << title
+  def add_item(title,price,quantity =1)
+    self.total += quantity * amount
+    quantity.times do
+      @items << title
+    end
+    @last_transaction = quantity * amount
   end
-  @last_transaction = quantity * amount
-end
 
   def apply_discount
     if @discount == 0
@@ -23,6 +23,7 @@ end
       return "After the discount, the total comes to $#{@total.to_i}."
     end
   end
+
   def void_last_transaction
     @total = @total - @last_transaction
   end
