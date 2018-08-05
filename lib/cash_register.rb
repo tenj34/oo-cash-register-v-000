@@ -3,8 +3,8 @@ class CashRegister
 
   def initialize(discount = 0)
     self.total = 0
-    @discount = discount # optionally takes a discount starts at 0
-    @items = [] # An empty of array of items everytime we call the class
+    self.discount = discount # optionally takes a discount starts at 0
+    self.items = [] # An empty of array of items everytime we call the class
   end
 
   def add_item(title, price, quantity = 1) #accepts title, price and increases the total of an item
