@@ -3,11 +3,11 @@ class CashRegister
 
   def initialize(discount = 0)
     @total = 0
-    @discount = discount
+    @discount = discount # optionally takes a discount starts at 0
     @items = [] # An empty of array of items everytime we call the class
   end
 
-  def add_item(title, price, quantity = 1)
+  def add_item(title, price, quantity = 1) #accepts title, price and increases the total of an item
    self.total += price * quantity
    quantity.times do
      @items << title
@@ -16,7 +16,7 @@ class CashRegister
   end
 
   def apply_discount
-    if @discount == 0
+    if self.discount == 0
       return "There is no discount to apply."
     else
       @total = @total * ((100.0 - discount) / 100.0)
