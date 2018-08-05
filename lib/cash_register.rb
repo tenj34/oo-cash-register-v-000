@@ -2,7 +2,7 @@ class CashRegister
   attr_accessor :total, :discount, :items, :last_transaction
 
   def initialize(discount = 0)
-    @total = 0
+    self.total = 0
     @discount = discount # optionally takes a discount starts at 0
     @items = [] # An empty of array of items everytime we call the class
   end
